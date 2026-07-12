@@ -6,6 +6,8 @@ url:
 modified: '2026-03-24'
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/semgroup-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/semgroup-corporation
   - type: Website
