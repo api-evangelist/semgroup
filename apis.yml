@@ -30,6 +30,11 @@ url:
 modified: '2026-03-24'
 apis: []
 common:
+  - type: ParentCompany
+    url: https://apis.io/providers/energy-transfer/
+    name: Energy Transfer
+    x-relationship: acquired
+    x-evidence: "SemGroup was a midstream service provider that gathered, transported, stored, processed, and marketed crude oil, refined products, and natural gas liquids before being acquired by Energy Transfer."
   - type: DomainSecurity
     url: security/semgroup-domain-security.yml
   - type: LinkedIn
