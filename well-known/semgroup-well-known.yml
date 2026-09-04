@@ -1,0 +1,76 @@
+generated: '2026-09-04'
+method: probed
+source: >-
+  Live unauthenticated GET of the named /.well-known/ path list against every host this
+  record knows. semgroup.com has no A record; www.semgroup.com is a blanket 302 to
+  https://www.energytransfer.com/ following the December 2019 merger, so no SemGroup host
+  serves any discovery document. The redirect targets belong to Energy Transfer (a
+  different company with its own profile at all/energy-transfer/) and are deliberately NOT
+  credited to SemGroup here.
+note: >-
+  Every probed path returned 302 with a zero-byte body pointing at another company's host.
+  Nothing was saved and NO WellKnown / SecurityTxt pointer is emitted — this file records a
+  measured absence, not a served surface.
+hosts:
+  - host: www.semgroup.com
+    note: 'Blanket 302 to https://www.energytransfer.com/ on every path; TLS cert does not cover this name.'
+    documents:
+      - path: /.well-known/security.txt
+        status: 302
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 302
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 302
+        file: null
+      - path: /.well-known/api-catalog
+        status: 302
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 302
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 302
+        file: null
+      - path: /.well-known/agent.json
+        status: 302
+        file: null
+  - host: semgroup.com
+    note: 'Apex has no A record (NXDOMAIN at resolution); no probe could be completed.'
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        file: null
+      - path: /.well-known/api-catalog
+        status: 0
+        file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery ran against the only host this company has. All misses.
+  probes:
+    - url: http://www.semgroup.com/openapi.json
+      status: 302
+      result: redirect to another company's host; no spec
+    - url: http://www.semgroup.com/swagger.json
+      status: 302
+      result: redirect to another company's host; no spec
+    - url: http://www.semgroup.com/llms.txt
+      status: 302
+      result: redirect to another company's host; no llms.txt
+    - url: http://www.semgroup.com/api
+      status: 503
+      result: origin error page, 592 bytes, no content
+    - url: http://www.semgroup.com/developers
+      status: 503
+      result: origin error page, 592 bytes, no content
+    - url: https://www.semgroup.com/
+      status: 0
+      result: 'TLS failure — certificate subject does not cover www.semgroup.com'
+    - url: http://www.semgroup.com/
+      status: 200
+      result: 'resolves after 302 to https://www.energytransfer.com/ — Energy Transfer corporate site'
+  graphql: not attempted — no GraphQL surface is named anywhere in the record or on the site
+  mcp: not attempted — no MCP endpoint is named anywhere in the record or on the site
+  ogc: not attempted — no evidence (no baseURL, no WMS/WFS/OGC prose) points at an OGC surface
+  wsdl: 'not attempted — no baseURL host exists to probe ?wsdl against'
