@@ -1,7 +1,9 @@
 ---
 title: Producers Back SemGroup Reorganization Plan
 url: https://www.law360.com/energy/articles/122526/producers-back-semgroup-reorganization-plan
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"SemGroup" press release artificial intelligence'
 position: 4
 source: serpapi-google

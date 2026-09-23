@@ -1,7 +1,9 @@
 ---
 title: 'Energy Transfer''s AI Strategy: Analysis of Dominance in ...'
 url: https://www.klover.ai/energy-transfer-ai-strategy-analysis-of-dominance-in-energy-ai/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"SemGroup" press release artificial intelligence'
 position: 2
 source: serpapi-google
