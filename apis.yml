@@ -102,3 +102,9 @@ x-coverage:
     - url: https://www.semgroup.com/
       status: 0
   checked: '2026-09-04'
+x-status: acquired
+x-acquired-by: energy-transfer
+x-parent: energy-transfer
+x-acquired-date: '2019-12'
+x-status-source: "https://energytransferpartners.gcs-web.com/news-releases/news-release-details/energy-transfer-and-semgroup-announce-successful-completion"
+x-status-evidence: "Energy Transfer completed its acquisition of SemGroup on 2019-12-05; semgroup.com no longer resolves (roadmap#812)"
